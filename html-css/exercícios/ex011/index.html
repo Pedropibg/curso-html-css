@@ -1,11 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>mídias em HTML</title>
 </head>
 <body>
-    
+    <h1>imagem dinâmica</h1>
+    <p>essa imagem se ajusta conforme o tamanho da página usando a tag (source media="(max-width: )" srcset="" type="image/") olhar o código fonte
+    </p>
+    <picture>
+        <source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png">
+        <img src="imagens/foto-g.png" alt="imagem flexisível">
+    </picture>
+    <h2>audio</h2>
+    colocamos audio com a tag audio 
+    <audio src="midia/audio-teste.mp3" controls autoplay></audio>
+    <p>e temos outro jeito (olhar no código fonte)</p>
+    <audio preload="metadata" controls>
+        <source src="midia/audio-teste.mp3" type="audio/mpeg">
+        <!--aqui seria para colocar outros tipos de audio-->
+    </audio>
 </body>
 </html>
